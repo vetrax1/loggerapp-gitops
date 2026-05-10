@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: loggerbuddy-frontend
+  namespace: loggerbuddy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: loggerbuddy-frontend
+  template:
+    metadata:
+      labels:
+        app: loggerbuddy-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: anunukemsam/logger-frontend-image:sha-d857aab
+          ports:
+            - containerPort: 80
