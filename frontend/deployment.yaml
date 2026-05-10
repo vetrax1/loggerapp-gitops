@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: anunukemsam/logger-frontend-image:sha-e5a9e44
+          image: anunukemsam/logger-frontend-image:sha-16ee1d0
           ports:
             - containerPort: 80
